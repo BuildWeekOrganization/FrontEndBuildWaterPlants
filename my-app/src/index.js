@@ -8,12 +8,15 @@ import { Provider } from 'react-redux'
 import reducer from './Reducers/PlantReducer'
 import { BrowserRouter as Router } from 'react-router-dom'
 
+const store = createStore(reducer)
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <App />
-    </Router> 
+    <Provider store={store}>
+      <Router>
+        <App />
+      </Router> 
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

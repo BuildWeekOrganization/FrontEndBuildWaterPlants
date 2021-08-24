@@ -1,11 +1,12 @@
 import plants from "../StaticPlants"
+import { ADD_PLANT, DELETE_PLANT } from "../Actions/PlantActions"
 
 const initialState = {
     plants: plants,
     appTitle: "Water My Plants"
 }
 
-const reducer= (state= initialState, action)=>{
+const reducer = (state = initialState, action)=>{
     switch(action.type){
         case ADD_PLANT:
             return{
@@ -20,3 +21,5 @@ const reducer= (state= initialState, action)=>{
             return state;
     }
 }
+
+export default reducer

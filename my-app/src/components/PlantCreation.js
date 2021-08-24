@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 
 export default function PlantCreation() {
     const [plant, setPlant] = useState({
-        id: '',
         nickname: '',
         species: '',
         h2oFrequency: '',
@@ -15,11 +14,9 @@ export default function PlantCreation() {
     function onSubmit(e) {
         e.preventDefault();
         setPlant({
-            id: '',
             nickname: '',
             species: '',
             h2oFrequency: '',
-            image: ''
         });
         console.log(plant);
       }
@@ -44,3 +41,5 @@ export default function PlantCreation() {
         </div>
     )
 }
+
+//h20Frequency = integer

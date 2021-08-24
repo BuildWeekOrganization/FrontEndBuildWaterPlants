@@ -17,6 +17,7 @@ function Login() {
             setUser({
                 email: details.email
             })
+            
         } else{setError('User does not exist!')}
 
     }

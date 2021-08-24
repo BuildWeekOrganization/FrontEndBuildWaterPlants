@@ -5,9 +5,9 @@ return (
 
     <div className="App">
       <div id='Header'>
-        <h1>Water My Plants!</h1>
 
-        <Link to='/login'>Log In</Link>
+        <Link to='/login'> Log In </Link>
+        <Link to='/signup'> Sign up </Link>
       </div>
     </div>
 

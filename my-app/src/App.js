@@ -1,5 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Link } from "react-router-dom";
+import PlantCreation from './components/PlantCreation';
 
 import { Route, Link, Switch } from 'react-router-dom';
 import SignUp from './components/SignUp';

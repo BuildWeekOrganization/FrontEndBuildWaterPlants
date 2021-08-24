@@ -8,12 +8,10 @@ export default function PlantCreation() {
         h2oFrequency: '',
         image: ''
     })
-
     function onChange(e){
         const {name, value} = e.target;
         setPlant({ ...plant, [name]: value })
     }
-
     function onSubmit(e) {
         e.preventDefault();
         setPlant({
@@ -25,7 +23,6 @@ export default function PlantCreation() {
         });
         console.log(plant);
       }
-    
     return (
         <div>
             <form onSubmit={onSubmit}>

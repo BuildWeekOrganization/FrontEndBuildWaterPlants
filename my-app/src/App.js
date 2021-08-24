@@ -1,15 +1,17 @@
 import './App.css';
 import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Route} from 'react-router-dom';
+import Login from './components/Login'
+import Home from './components/Home'
 
 function App() {
   return (
     <Router>
     <div className="App">
-      <div id='Header'>
-        <h1>Water My Plants!</h1>
-        <Link to='/login'>Log In</Link>
-      </div>
+
     </div>
+      <Route exact path = '/'><Home/></Route>
+      <Route exact path ='/login'> <Login/></Route>
     </Router>
   );
 }

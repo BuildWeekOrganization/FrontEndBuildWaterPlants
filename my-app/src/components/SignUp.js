@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, {useEffect, useState} from 'react'
 import * as yup from 'yup';
 import schema from '../Validation/SignUpValidation'
+import { useHistory } from 'react-router';
 
 
 const initialFormValues ={
@@ -26,7 +27,7 @@ export default function SignUp(){
     const [userValues, setUserValues] = useState(initialFormValues)
     const [user, setUser]= useState([])
     const [errors, setErrors]= useState(initialErrors)
-
+    const {push}=useHistory()
     //validation
 
     const validation = (name, value) =>{
@@ -64,8 +65,7 @@ export default function SignUp(){
         axios.post("https://watermyplants-02.herokuapp.com/api/auth/register", userValues)
         .then(res=>{
             console.log(res)
-            // localStorage.setItem('token', res.data.token);
-            // submitUser(res.data);
+            push('/login')
         })
     }
 

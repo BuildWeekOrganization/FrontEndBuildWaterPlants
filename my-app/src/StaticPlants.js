@@ -15,7 +15,7 @@ let plants = [
     },
     {
         id: 3,
-        nickname: "Jonathan",
+        nickname: "Jimothy",
         species: "Succulent",
         h2oFrequency: "12:00 AM",
         image: null

@@ -7,12 +7,12 @@ const signUpSchema = yup.object().shape({
         .trim()
         .required('Username Required')
         .min(5, 'Username must contain at least 5 characters'),
-    email: yup
-        .string()
-        .trim()
-        .email()
-        .required('Email Required'),
-    phone: yup
+    // email: yup
+    //     .string()
+    //     .trim()
+    //     .email()
+    //     .required('Email Required'),
+    phone_num: yup
         .string()
         .required('Phone Number Required')
         .min(12, 'Phone must be valid number/format')

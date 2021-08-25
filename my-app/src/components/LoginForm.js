@@ -1,12 +1,21 @@
+import axios from 'axios';
 import React, {useState} from 'react'
 import { Link} from 'react-router-dom';
+import { useHistory } from 'react-router';
 
-function LoginForm({LoginF, error}) {
-    const [details, setDetails] = useState({email:'', password: ''})
+function LoginForm({error,setAuth}) {
+    const {push} = useHistory()
+    const [details, setDetails] = useState({username:'', password: ''})
 
     const submitHandler = e =>{
         e.preventDefault();
-        LoginF(details);
+        axios.post("https://watermyplants-02.herokuapp.com/api/auth/login", details)
+        .then(res=>{
+            console.log('Submit', res.data)
+            localStorage.setItem('token', res.data.token);
+            setAuth(res.data.token)
+            push('/')
+        })
     }
 
     return (
@@ -15,8 +24,8 @@ function LoginForm({LoginF, error}) {
                 <h2 className = 'login'>Login</h2>
                 {(error !== '') ? (<div className = 'error'>{error}</div>) : ''}
                 <div className ='form-group'>
-                    <label htmlFor ='email'>E-mail: </label>
-                    <input type ='email' name ='email' id = 'email' onChange ={e => setDetails({...details, email: e.target.value})} value ={details.email}/>
+                    <label htmlFor ='username'>Username: </label>
+                    <input type ='username' name ='username' id = 'username' onChange ={e => setDetails({...details, username: e.target.value})} value ={details.username}/>
                 </div>
                 <div className ='form-group'>
                     <label htmlFor ='password'>Password: </label>

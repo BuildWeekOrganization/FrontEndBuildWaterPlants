@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { addPlant } from '../Actions/PlantActions';
 
 export default function PlantCreation() {
     const [plant, setPlant] = useState({
@@ -20,6 +21,7 @@ export default function PlantCreation() {
         });
         console.log(plant);
       }
+
     return (
         <div>
             <form onSubmit={onSubmit}>
@@ -30,7 +32,7 @@ export default function PlantCreation() {
                     <input type='text' name='species' onChange={onChange} value={plant.species}/>
                 </label>
                 <label>When to water
-                    <input type='time' name='h2oFrequency' onChange={onChange} value={plant.h2oFrequency}/>
+                    <input type='number' name='h2oFrequency' onChange={onChange} value={plant.h2oFrequency}/>
                 </label>
                 <label>Add an image of your plant
                     <input type='file' name='image' onChange={onChange} value={plant.image}/>

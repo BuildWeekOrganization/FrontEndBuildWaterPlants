@@ -22,14 +22,13 @@ function App() {
     <Router>
     <div className="App">
       <header>
+        <h1>Water My Plants!</h1>
         <nav>{
         localStorage.getItem('token') ? ( <><Link to='/login' onClick={Logout}>Logout</Link></>):(<><Link to='/login'> Login </Link><Link to='/signup'> Sign-up </Link></>)
         }</nav>
 
       </header>
-      <div id='Header'>
-        <h1>Water My Plants!</h1>
-      </div>
+      
       <Switch>
         <Route path='/signup'><SignUp/></Route>
         <Route path ='/login'> <Login setAuth={setAuth}/></Route>

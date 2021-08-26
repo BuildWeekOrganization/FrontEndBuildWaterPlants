@@ -11,6 +11,25 @@
     
 }
 
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2vw;
+    font-size: 1.2rem;
+    color: #698b76;
+    text-shadow: 5px 5px 10px rgba(93, 158, 81, 0.596));
+}
+
+header a{
+    align-items: flex-end;
+    padding: 1vh 1vw;
+    margin: 1vw;
+    background-color: #698b76;
+    border-radius: 12px;
+    color: white;
+}
+
 form{
 
     background-color: white;

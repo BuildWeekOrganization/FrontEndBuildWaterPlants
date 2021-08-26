@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, {useEffect, useState} from 'react'
 import * as yup from 'yup';
 import schema from '../Validation/SignUpValidation'
+import './styles/login.css';
 
 
 const initialFormValues ={
@@ -80,61 +81,73 @@ export default function SignUp(){
 
 
     return(
-        <form className='Form' onSubmit={onSubmit}>
+        <div className='container'>
+            <form className='form-card' onSubmit={onSubmit}>
+                <h2 className='form-title'>Sign Up</h2>
+                
 
 
-            <div className='Errors'>
-                <div className='Placeholder'></div>
-            </div>
+                <div className='Inputs'>
+                    <div className='form-group'>
+                        <label htmlFor ='username'>Username: </label>
+                            <input
+                                type='text'
+                                name='username'
+                                placeholder='Username'
+                                value= {userValues.username}
+                                onChange={onChange}
+                            />
+                        <div className='errors'>{errors.username}</div>   
+                    </div>
+                    
 
+                    {/* <div className='form-group'>
+               
+                        <label>E-mail: </label> 
+                            <input
+                                type='email'
+                                name='email'
+                                placeholder='E-Mail'
+                                value= {userValues.email}
+                                onChange={onChange}
+                            />
+                        <br/>
+                    </div> */}
 
-            <div className='Inputs'>
-                <label>Username: 
-                    <input
-                        type='text'
-                        name='username'
-                        placeholder='Username'
-                        value= {userValues.username}
-                        onChange={onChange}
-                    />
-                </label>
-{/*                 
-                <label>E-mail: 
-                    <input
-                        type='email'
-                        name='email'
-                        placeholder='E-Mail'
-                        value= {userValues.email}
-                        onChange={onChange}
-                    />
-                </label> */}
+                    <div className='form-group'>
+                        <label>Phone Number:  </label>
+                            <input
+                                type='tel'
+                                name='phone_num'
+                                placeholder='000-123-1234'
+                                pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'
+                                value= {userValues.phone_num}
+                                onChange={onChange}
+                            />
+                        <div className='errors'>{errors.phone_num}</div>    
+                    </div>
 
-                <label>Phone Number: 
-                    <input
-                        type='tel'
-                        name='phone_num'
-                        placeholder='000-123-1234'
-                        pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'
-                        value= {userValues.phone_num}
-                        onChange={onChange}
-                    />
-                </label>
+                    <div className='form-group'>
+                        <label htmlFor='password'>Password: </label>
+                            <input
+                                type='password'
+                                name='password'
+                                placeholder='Password'
+                                value= {userValues.password}
+                                onChange={onChange}
+                            />
+                        <div className='errors'>{errors.password}</div>  
+                    </div>
+                    
+                </div>
 
-                <label>Password:
-                    <input
-                        type='password'
-                        name='password'
-                        placeholder='Password'
-                        value= {userValues.password}
-                        onChange={onChange}
-                    />
-                </label>
-            </div>
+                <div >
+                    <input type='submit' value='Sign Up' disabled={disabled}className='submit' />
+                </div>
 
-            <div className='submitBtn'>
-                <input type='submit' value='Sign Up' disabled={disabled} />
-            </div>
+            </form> 
+        </div>
+        
 
-        </form>
     );
 }

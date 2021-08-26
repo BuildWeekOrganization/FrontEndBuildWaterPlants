@@ -21,7 +21,7 @@ function LoginForm({error,setAuth}) {
     return (
         <form onSubmit = {submitHandler}>
             <div className ='form-card'>
-                <h2 className = 'login'>Login</h2>
+                <h2 className = 'form-title'>Login</h2>
                 {(error !== '') ? (<div className = 'error'>{error}</div>) : ''}
                 <div className ='form-group'>
                     <label htmlFor ='username'>Username: </label>

@@ -3,7 +3,7 @@ import React from 'react'
 export default function PlantPanel(props) {
 
     return (
-        <div>
+        <div className='plants'>
             <h2>{props.plant.nickname}</h2>
             <img src={props.plant.image} alt={props.plant.nickname} />
             <p> {props.plant.nickname} is a {props.plant.species}.</p>

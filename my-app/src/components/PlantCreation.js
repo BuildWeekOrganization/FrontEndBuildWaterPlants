@@ -13,14 +13,8 @@ const initialFormValues={
 
 export default function PlantCreation(props) {
     const [formValues, setFormValues] = useState(initialFormValues);
-    const [plant, setPlant] = useState({
-        nickname: "",
-        species: "",
-        h2o_frequency: 0,
-        image: "",
-        plant_id:"",
-        user_id:""
-    })
+    const [plant, setPlant] = useState({})
+
 
     function onChange(e){
         setFormValues({
@@ -31,17 +25,18 @@ export default function PlantCreation(props) {
     }
     function onSubmit(e) {
         e.preventDefault();
-        axiosWithAuth().post('https://watermyplants-02.herokuapp.com/api/plants', formValues)
+        setPlant(formValues)
+        axiosWithAuth().post('api/plants', plant)
         .then(res=>{
             console.log(res)
-            setPlant(res.data)
+            props.setPlantList(res.data)
         })
         .catch(err=>{
             console.log(err)
         })
-        setPlant()
+        setFormValues(initialFormValues)
         props.setIsHidden(true)
-        console.log(plant);
+        console.log(formValues);
       }
 
     return (

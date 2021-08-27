@@ -39,19 +39,24 @@ export default function PlantCreation(props) {
     return (
         <div>
             <form onSubmit={onSubmit}>
-                <label>Plant's name
-                    <input type='text' name='nickname' onChange={onChange} value={formValues.nickname}/>
-                </label>
-                <label>Plant's Species
-                    <input type='text' name='species' onChange={onChange} value={formValues.species}/>
-                </label>
-                <label>When to water
-                    <input type='number' name='h2o_frequency' onChange={onChange} value={formValues.h2o_frequency}/>
-                </label>
-                <label>Add an image of your plant
-                    <input type='file' name='image' onChange={onChange} value={formValues.image}/>
-                </label>
-                <button type="submit" >Add Plant</button>
+                <div className='plant-form'>
+                    <label>Plant's name: </label>
+                        <input type='text' name='nickname' onChange={onChange} value={formValues.nickname}/>
+                </div>
+                <div className='plant-form'>
+                    <label>Plant's Species: </label>  
+                        <input type='text' name='species' onChange={onChange} value={formValues.species}/>
+                </div>
+                <div className='plant-form'>
+                    <label>When to water: </label> 
+                        <input type='number' name='h2o_frequency' onChange={onChange} value={formValues.h2o_frequency}/>
+                </div>
+                <div className='plant-form'>
+                    <label>Add an image of your plant </label>    
+                        <input type='file' name='image' onChange={onChange} value={formValues.image} />
+                </div>
+                
+                <button type="submit" className='submit'>Add Plant</button>
             </form>
             
         </div>

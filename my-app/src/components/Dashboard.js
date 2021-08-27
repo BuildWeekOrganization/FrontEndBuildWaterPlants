@@ -35,19 +35,22 @@ export default function Dashboard() {
 
     return (
         <div>
+            <div className='container'>
                 <div className="create-plant" onClick={toggleForm}>
-                    <button>Create a Plant!</button>
+                    <button className='submit'>Create a Plant!</button>
                 </div>
+                    
                 <div className="plant-form hidden">
                     <PlantCreation setPlantList={setPlantList} setIsHidden={setIsHidden}/>
                     <button onClick={cancelForm}>Cancel</button>
                 </div>
-                <div>
+                <div className='plants-container'>
                     {plantList.map((plant)=>{
-                        return <PlantPanel key={plant.id} plant={plant}/>
-                    }
+                        return <PlantPanel key={plant.id} plant={plant} />
+                        }
                     )}
                 </div>
+            </div>
         </div>
     )
 }

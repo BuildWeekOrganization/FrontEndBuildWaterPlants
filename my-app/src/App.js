@@ -23,7 +23,7 @@ function App() {
     <Router>
     <div className="App">
       <header>
-        <h1>Water My Plants!</h1>
+        <h1><a href='/' className='home-link'>Water My Plants!</a></h1>
         <nav>{
         localStorage.getItem('token') ? ( <><Link to='/dashboard'>Visit Plants / Create Plant</Link><Link to='/login' onClick={Logout}>Logout</Link></>):(<><Link to='/login'> Login </Link><Link to='/signup'> Sign-up </Link></>)
         }</nav>

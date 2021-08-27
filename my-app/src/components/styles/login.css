@@ -11,17 +11,20 @@
     
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 2vw;
-    font-size: 1.2rem;
+.home-link{
+    font-size: 2.3rem;
     color: #698b76;
     text-shadow: 5px 5px 10px rgba(93, 158, 81, 0.596);
 }
 
-header a{
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2vw;
+}
+
+header nav a{
     align-items: flex-end;
     padding: 1vh 1vw;
     margin: 1vw;
@@ -29,10 +32,38 @@ header a{
     border-radius: 12px;
     color: white;
 }
+.welcome{
+    background-color: rgba(255, 255, 255, 0.829);
+    padding: 40px;
+    height: auto;
+    box-shadow: 1px 1px 20px black;
+    border-radius: 15px;
+    color: #4a6655e8;
 
+}
+.plants img{
+    max-width: 50%;
+    max-height: 50%;
+    object-fit: fill;
+}
+
+.plants{
+    max-width: 500px;
+    max-height: 500px;
+    align-items: flex-end;
+    padding: 1vh 1vw;
+    margin: 1vw;
+    background-color: rgba(255, 255, 255, 0.829);
+    border-radius: 12px;
+    color: #4a6655e8;
+}
+
+.plants-container{
+    display: flex;
+}
 form{
 
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.829);
     padding: 40px;
     height: auto;
     box-shadow: 1px 1px 20px black;

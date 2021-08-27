@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import LoginForm from './LoginForm'
 import './styles/login.css';
 

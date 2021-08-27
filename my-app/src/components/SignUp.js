@@ -26,7 +26,6 @@ export default function SignUp(){
 
     const [disabled, setDisabled] = useState(initialDisabled)
     const [userValues, setUserValues] = useState(initialFormValues)
-    const [user, setUser]= useState([])
     const [errors, setErrors]= useState(initialErrors)
     const {push}=useHistory()
 
@@ -66,7 +65,7 @@ export default function SignUp(){
         evt.preventDefault();
         axios.post("https://watermyplants-02.herokuapp.com/api/auth/register", userValues)
         .then(res=>{
-            console.log(res)
+            console.log(res.data)
             push('/login')
         })
     }

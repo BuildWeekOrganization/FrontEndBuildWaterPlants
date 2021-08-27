@@ -1,6 +1,4 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
-import Dashboard from './Dashboard';
 import './styles/login.css';
 
 function Home(){

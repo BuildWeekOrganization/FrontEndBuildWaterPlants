@@ -11,7 +11,7 @@ function LoginForm({error,setAuth}) {
         e.preventDefault();
         axios.post("https://watermyplants-02.herokuapp.com/api/auth/login", details)
         .then(res=>{
-            console.log('Submit', res.data)
+            console.log('Submit', res)
             localStorage.setItem('token', res.data.token);
             setAuth(res.data.token)
             push('/')

@@ -1,4 +1,3 @@
-import axios from 'axios'
 import axiosWithAuth from './helpers/axiosWithAuth'
 import React, { useState, useEffect } from 'react'
 import PlantPanel from './PlantPanel'
@@ -8,7 +7,7 @@ import PlantCreation from './PlantCreation'
 export default function Dashboard() {
     const [isHidden, setIsHidden] = useState(true);
     const [plantList, setPlantList] = useState([]);
-    const [searchValue, setSearchValue] = useState("");
+    const [currUser, setCurrUser] = useState("")
     
     function toggleForm() {
         setIsHidden(!isHidden);

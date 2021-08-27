@@ -4,7 +4,6 @@ import React, {useState, useEffect} from 'react';
 
 import Login from './components/Login'
 import Home from './components/Home'
-import PlantCreation from './components/PlantCreation';
 import SignUp from './components/SignUp';
 import Dashboard from './components/Dashboard';
 

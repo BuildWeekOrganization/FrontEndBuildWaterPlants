@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, {useState} from 'react'
 import axiosWithAuth from './helpers/axiosWithAuth';
 
@@ -7,8 +6,6 @@ const initialFormValues={
     species: "",
     h2o_frequency: 0,
     image: "",
-    plant_id:"",
-    user_id:""
 }
 
 export default function PlantCreation(props) {
@@ -26,7 +23,7 @@ export default function PlantCreation(props) {
     function onSubmit(e) {
         e.preventDefault();
         setPlant(formValues)
-        axiosWithAuth().post('api/plants', plant)
+        axiosWithAuth().post('https://watermyplants-02.herokuapp.com/api/plants', plant)
         .then(res=>{
             console.log(res)
             props.setPlantList(res.data)

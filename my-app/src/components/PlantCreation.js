@@ -47,19 +47,21 @@ export default function PlantCreation(props) {
     return (
         <div>
             <form onSubmit={onSubmit}>
-                <label>Plant's name
+                <div className='group'>
+                <label>Plant's name:&nbsp;
                     <input type='text' name='nickname' onChange={onChange} value={formValues.nickname}/>
                 </label>
-                <label>Plant's Species
+                <label>Plant's Species:&nbsp;
                     <input type='text' name='species' onChange={onChange} value={formValues.species}/>
                 </label>
-                <label>When to water
+                <label>When to water:&nbsp;
                     <input type='number' name='h2o_frequency' onChange={onChange} value={formValues.h2o_frequency}/>
                 </label>
-                <label>Add an image of your plant
+                <label>Add an image of your plant:&nbsp; 
                     <input type='file' name='image' onChange={onChange} value={formValues.image}/>
                 </label>
-                <button type="submit" >Add Plant</button>
+                <button className = 'create' type="submit" >Add Plant</button>
+                </div>
             </form>
             
         </div>

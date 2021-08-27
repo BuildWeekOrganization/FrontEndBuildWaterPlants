@@ -23,6 +23,11 @@ function App() {
     <Router>
     <div className="App">
       <header>
+      {/* <object>
+
+          <img src ='https://www.svgrepo.com/show/124711/watering-can.svg' alt ='Watering can' className='logo'/>
+
+      </object> */}
         <h1>Water My Plants!</h1>
         <nav>{
         localStorage.getItem('token') ? ( <><Link to='/dashboard'>Visit Plants / Create Plant</Link><Link to='/login' onClick={Logout}>Logout</Link></>):(<><Link to='/login'> Login </Link><Link to='/signup'> Sign-up </Link></>)

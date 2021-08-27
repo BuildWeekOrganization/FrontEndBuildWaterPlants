@@ -1,0 +1,92 @@
+
+
+.create{
+    align-self: center;
+    margin-top: 20px;
+    padding: 15px;
+    height: auto;
+    color: white;
+    background-color: #698b76;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    border:2px 2px white;
+    transition: .3s;
+    border: white 2px solid;
+}
+
+ button:hover{
+    opacity: 70%;
+}
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.panel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(243, 238, 226, 0.50);
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px;
+    color: #4d5d53;
+    box-shadow: 1px 1px 20px black;
+}
+.panel img{
+    height: 400px;
+    width: 450px;
+    image-resolution:inherit;
+    border: white solid 5px;
+}
+header{
+    position:static;
+}
+.panel h2{
+    font-size: 2rem;
+}
+.panel p{
+    font-size: 1.5rem;
+}
+
+.dashboard{
+    background-color: #cce3de;
+
+}
+
+form{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    padding: 10px;
+}
+.group{
+    display: flex;
+    flex-direction: column;
+
+}
+label{
+
+    padding: 5px;
+
+}
+
+@media (max-width: 1200px) {
+    .panel{
+        width: 90%;
+    }
+    
+  }
+
+@media (max-width: 660px){
+    .panel{
+        width: 95%;
+    }
+}

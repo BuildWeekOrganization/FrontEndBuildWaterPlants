@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react'
 import plants from '../StaticPlants'
 import PlantPanel from './PlantPanel'
 import PlantCreation from './PlantCreation'
-
+import './styles/dashboard.css'
 
 export default function Dashboard() {
     const [isHidden, setIsHidden] = useState(true);
@@ -35,19 +35,21 @@ export default function Dashboard() {
     }, []);
 
     return (
-        <div>
+        <div className='dashboard'>
                 <div className="create-plant" onClick={toggleForm}>
-                    <button>Create a Plant!</button>
+                    <button className='create'>Create a Plant!</button>
                 </div>
                 <div className="plant-form hidden">
                     <PlantCreation setIsHidden={setIsHidden}/>
-                    <button onClick={cancelForm}>Cancel</button>
+                    <button className ='create' onClick={cancelForm}>Cancel</button>
                 </div>
                 <div>
+                <div className='center'>
                     {plantList.map((plant)=>{
                         return <PlantPanel key={plant.id} plant={plant}/>
                     }
                     )}
+                </div>
                 </div>
         </div>
     )

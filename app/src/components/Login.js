@@ -3,11 +3,7 @@ import LoginForm from './LoginForm'
 import './styles/login.css';
 
 function Login(props) {
-    const AdminUser ={
-        username: 'admin',
-        password:"admin"
-    }
-    const [error, setError] = useState('')
+    const [error] = useState('')
 
     return (
         <div className = 'container'>

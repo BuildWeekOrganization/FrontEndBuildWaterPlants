@@ -7,7 +7,6 @@ import PlantCreation from './PlantCreation'
 export default function Dashboard() {
     const [isHidden, setIsHidden] = useState(true);
     const [plantList, setPlantList] = useState([]);
-    const [currUser, setCurrUser] = useState("")
     
     function toggleForm() {
         setIsHidden(!isHidden);

@@ -32,7 +32,7 @@ function LoginForm({error,setAuth}) {
                     <input type ='password' name ='password' id = 'password' onChange ={e => setDetails({...details, password: e.target.value})} value ={details.password}/>
                 </div>
                 <input type = 'submit' value ='LOGIN' className='submit'/>
-                <Link to ='/signup'><a>Don't have an account? Sign up!</a></Link>
+                <Link to ='/signup'><button>Don't have an account? Sign up!</button></Link>
             </div>
         </form>
     )
